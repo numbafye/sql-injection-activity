@@ -27,11 +27,12 @@ app.post("/login", function (req, res) {
   const password = req.body.password;
 
   // Construct the SQL query with user-provided data
-  const query = "SELECT title FROM user where username = '";
-  username;
-  ("' and password = '");
-  password;
-  ("'");
+  const query =
+    "SELECT title FROM user where username = '" +
+    username +
+    "' and password = '" +
+    password +
+    "'";
 
   // Execute the query on the database
   db.get(query, function (err, row) {
