@@ -19,7 +19,7 @@ db.serialize(function () {
 });
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join("index.html"));
 });
 
 app.post("/login", function (req, res) {
@@ -54,8 +54,6 @@ app.post("/login", function (req, res) {
   });
 });
 
-const server = http.createServer(app);
-const port = 3000;
-server.listen(port, function () {
-  console.log(`Server is running on port ${port}`);
+app.listen(3000, function () {
+  console.log(`Server is running on port 3000`);
 });
