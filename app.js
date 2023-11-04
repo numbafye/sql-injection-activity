@@ -38,6 +38,7 @@ app.post("/login", function (req, res) {
       if (!row) {
         res.redirect("/index.html#unauthorized");
       } else {
+        console.log("Successful login:", row.title);
         res.send(
           "Hello <b>" +
             row.title +
